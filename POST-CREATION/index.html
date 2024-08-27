@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- bootstrap cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <!-- creating a sign in form  -->
+    <div class="container" id="container">
+        <div class="row-12 p-5 m-5">
+            <div class="div d-flex justify-content-between
+             custom">
+                <div class="form p-4">
+                    <form>
+                        <h1 class="mt-3 mb-3 d-flex justify-content-center align-item-center pt-5 text-light">Sign in</h1>
+
+                        <div class="mb-2">
+                            <input type="email" class="form-control inp mt-3 mb-3 w-100" id="input1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control inp mt-3 mb-3" id="input2">
+                        </div>
+                        <button type="submit" class="btn border-0 w-100 btn-primary"
+                            onclick="submitHidden()">Submit</button>
+                    </form>
+                </div>
+
+                <div class="green p-4">
+                    <h1>Welcome back!</h1>
+                    <p>Welcome back! We are happy to have you <br> here. it's great to see you again. we hope <br> had a
+                        safe and enjoyable time away. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Creating a post section -->
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 "><img src="./images/nav-img.png" alt=""></span>
+            <i class="fa-regular first-svg fa-sun" id="light"></i>
+            <!-- <i class="fa-regular sec-svg fa-moon" id="dark"></i> -->
+    </nav>
+
+
+    <div class="row div">
+        <div class="col-10 user-img d-flex align-items-center m-1">
+            <img src="./images/profile-icon.png" id="photo" onclick="uploadimg()" alt="">
+            <label for="file" id="uploadFilebtn"><i class="fa-solid fa-camera camera fs-5"
+                    style="color: #999999;"></i></label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" class="d-none" id="file">
+            <input class="m-2 name" type="text" name="name" id="inputname">
+        </div>
+
+        <div class="p-3 ms-4 col-5 divIs">
+            <h3>Create Post</h3>
+            <div class="card p-2">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Title:</label>
+                    <input id="title" type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description:</label>
+                    <textarea id="description" class="form-control" id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                    <div class="mt-3">
+                        
+                        <button onclick="postHere()" class="btn w-100 bg-btn text-white">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- images section  -->
+    <div class="col-lg-12 mt-3 d-flex">
+        <div class="images ms-3 d-flex">
+            <img onclick="selectImg('./images/img1.jpg')" src="./images/img1.jpg" class="bg-img" alt="" />
+            <img onclick="selectImg('./images/img2.jpg')" src="./images/img2.jpg" class="bg-img" alt="" />
+            <img onclick="selectImg('./images/img4.jpg')" src="./images/img4.jpg" class="bg-img" alt="" />
+            <img onclick="selectImg('./images/img5.jpg')" src="./images/img5.jpg" class="bg-img" alt="" />
+            <img onclick="selectImg('./images/img3.jpg')" src="./images/img3.jpg" class="bg-img" alt="" />
+        </div>
+    </div>
+    <div id="post" class="
+    p-4 col-lg-8 col-md-6"></div>
+
+    <div class="d-flex
+    mt-5 last text-light justify-content-center d-flex">
+        <h3><a href="https://www.linkedin.com/in/sairabatool123/"><i class="fa-brands fa-linkedin"></i></a></h3>
+        <h3><a href="https://github.com/SairaBatool123"><i class="fa-brands fa-github"></i></a></h3>
+        <h3><a href="https://app.netlify.com/teams/sairabatool123/overview"><i class="fa-solid fa-link"></i></a></h3>
+    </div>
+    <h5 class="text-light text-center">Copyright © 2024 Saira Batool . All Rights Reseved.</h5>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

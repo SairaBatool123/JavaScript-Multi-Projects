@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.body{
+    font-family: "Fira Sans Condensed", sans-serif;
+    background-color: white; 
+    /* overflow: hidden; */
+}
+.custom{
+    border: transparent;
+    height: 70vh !important;
+}
+.inp{
+    background-color: white!important;
+}
+.div{
+    background-color:#292931;
+}
+.green{
+    color: white;
+    background-color: #1a535b;
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+    display : flex;
+ flex-direction: column;
+}
+.btn{
+background-color: #1a535b !important;
+}
+.form{
+    width: 550px;
+}
+p{
+    font-size: 18px;
+    line-height: 30px;
+}
+img{
+    width : 90px;
+}
+.userimg{
+    width: 130px;
+    height: 130px;
+    border-radius: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.camera{
+position: absolute;
+left: 75px;
+top: 111px;
+}
+
+.uploadFilebtn{
+position: absolute;
+bottom: 20px;
+top: 50px;
+width: 30px;
+height: 30px;
+cursor: pointer;
+transform: translate(-90%);
+}
+.bg-btn{
+background-color: #292931 !important;
+}
+.divIs{
+    background-color: white;
+}
+.first-svg{
+position: absolute;
+right: 10px;
+}
+
+/* copy right section */
+a i{
+    color: white !important;
+    font-size: 28px;
+    margin: 10px;
+
+}
+.name{
+    border: transparent;
+    background-color: #719f9d!important;
+}
+/* images sction */
+.images{
+    /* justify-content: space-between; */
+    gap: 78px;
+}
+.bg-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+.selectedImg{
+    border: 2px solid #11414d;
+}
